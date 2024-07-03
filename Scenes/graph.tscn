@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmmnymbts27dl"]
+
+[ext_resource type="Script" path="res://Scenes/Graph.gd" id="1_as88x"]
+[ext_resource type="Texture2D" uid="uid://bajwdkdo43xe" path="res://Assets/dot.png" id="2_dhqjh"]
+
+[node name="Graph" type="Node2D" node_paths=PackedStringArray("label_holder", "camera", "xline", "yline")]
+script = ExtResource("1_as88x")
+label_holder = NodePath("LabelHolder")
+camera = NodePath("Camera2D")
+xline = NodePath("LineGuide/XLine")
+yline = NodePath("LineGuide/YLine")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(199, -212)
+zoom = Vector2(0.9, 0.9)
+
+[node name="LabelHolder" type="Node2D" parent="."]
+
+[node name="LineGuide" type="Node2D" parent="."]
+
+[node name="XLine" type="Line2D" parent="LineGuide"]
+points = PackedVector2Array(300, 0, 300, -240)
+width = 2.0
+default_color = Color(0.780392, 0.552941, 0.27451, 1)
+
+[node name="YLine" type="Line2D" parent="LineGuide"]
+points = PackedVector2Array(0, -240, 300, -240)
+width = 2.0
+default_color = Color(0.780392, 0.552941, 0.27451, 1)
+
+[node name="Dot" type="Sprite2D" parent="LineGuide"]
+modulate = Color(0.780392, 0.552941, 0.27451, 1)
+position = Vector2(300, -240)
+scale = Vector2(0.022, 0.022)
+texture = ExtResource("2_dhqjh")

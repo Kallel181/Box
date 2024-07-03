@@ -1,0 +1,158 @@
+[gd_scene load_steps=16 format=3 uid="uid://t1n8lk48p156"]
+
+[ext_resource type="Script" path="res://Scenes/Box_controll.gd" id="1_eau22"]
+[ext_resource type="Texture2D" uid="uid://0q76bgb71ssp" path="res://Assets/Shadow_strong1.png" id="1_yn27w"]
+[ext_resource type="Texture2D" uid="uid://cyyish07lp3o7" path="res://Assets/Box_Box_sides.png" id="3_b7x80"]
+[ext_resource type="Texture2D" uid="uid://5vda01xbhq2y" path="res://Assets/Side_label.png" id="3_p74u0"]
+[ext_resource type="Texture2D" uid="uid://cakjutx4ay4cw" path="res://Assets/Stamp3.png" id="4_ecewf"]
+[ext_resource type="Texture2D" uid="uid://d1ckb8ph8nofe" path="res://Assets/Stamp.png" id="5_p0dwv"]
+[ext_resource type="Texture2D" uid="uid://dnagyu8f3b0n3" path="res://Assets/Stamp2.png" id="6_qnttb"]
+[ext_resource type="FontFile" uid="uid://cl7iw4n1mms0j" path="res://Assets/Fonts/cmu.sans-serif-medium.ttf" id="8_qvqx1"]
+[ext_resource type="Texture2D" uid="uid://b47v4ojdthm20" path="res://Assets/equation (1).png" id="9_utg0j"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o46ki"]
+sky_top_color = Color(1, 1, 1, 1)
+sky_horizon_color = Color(1, 1, 1, 1)
+ground_bottom_color = Color(1, 1, 1, 1)
+ground_horizon_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Sky" id="Sky_xbja0"]
+sky_material = SubResource("ProceduralSkyMaterial_o46ki")
+
+[sub_resource type="Environment" id="Environment_wfqae"]
+background_mode = 2
+background_energy_multiplier = 0.6
+sky = SubResource("Sky_xbja0")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tuv7t"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("3_b7x80")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_x5pyr"]
+_surfaces = [{
+"aabb": AABB(-4, -0.5, -4, 8, 1, 8.00001),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray(0, 0, 9, 0, 8, 0, 0, 0, 2, 0, 9, 0, 2, 0, 10, 0, 9, 0, 2, 0, 6, 0, 10, 0, 6, 0, 11, 0, 10, 0, 6, 0, 4, 0, 11, 0, 4, 0, 8, 0, 11, 0, 4, 0, 0, 0, 8, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 5, 0, 14, 0, 7, 0, 5, 0, 15, 0, 14, 0, 1, 0, 9, 0, 3, 0, 1, 0, 8, 0, 9, 0, 3, 0, 10, 0, 7, 0, 3, 0, 9, 0, 10, 0, 7, 0, 11, 0, 5, 0, 7, 0, 10, 0, 11, 0, 5, 0, 8, 0, 1, 0, 5, 0, 11, 0, 8, 0, 14, 0, 12, 0, 13, 0, 14, 0, 15, 0, 12, 0, 3, 0, 12, 0, 1, 0, 3, 0, 13, 0, 12, 0, 1, 0, 15, 0, 5, 0, 1, 0, 12, 0, 15, 0, 7, 0, 13, 0, 3, 0, 7, 0, 14, 0, 13, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 26, 4, 255, 255, 228, 251, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 4, 255, 255, 26, 4, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 228, 251, 255, 255, 228, 251, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 228, 251, 255, 255, 26, 4, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 26, 4, 209, 17, 228, 251, 0, 0, 26, 4, 209, 17, 26, 4, 0, 0, 228, 251, 209, 17, 26, 4, 0, 0, 228, 251, 209, 17, 228, 251, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xdj4f"]
+resource_name = "Box_Cube_002"
+_surfaces = [{
+"aabb": AABB(-4, -0.5, -4, 8, 1, 8.00001),
+"attribute_data": PackedByteArray(204, 225, 195, 217, 41, 224, 90, 217, 255, 255, 255, 255, 174, 233, 164, 230, 76, 154, 41, 251, 49, 235, 45, 218, 0, 0, 255, 255, 73, 211, 90, 217, 0, 0, 255, 255, 181, 236, 45, 218, 178, 157, 41, 251, 49, 235, 164, 230, 204, 225, 164, 230, 41, 224, 58, 230, 45, 224, 195, 217, 174, 233, 45, 218, 76, 154, 212, 252, 43, 232, 164, 230, 255, 255, 255, 255, 73, 211, 58, 230, 45, 224, 164, 230, 181, 236, 164, 230, 178, 157, 212, 252, 43, 232, 45, 218, 104, 227, 195, 217, 62, 154, 26, 251, 255, 255, 0, 0, 0, 0, 0, 0, 192, 157, 26, 251, 0, 0, 0, 0, 255, 255, 0, 0, 192, 157, 227, 252, 201, 225, 164, 230, 104, 227, 164, 230, 62, 154, 227, 252, 201, 225, 195, 217, 47, 232, 164, 230, 69, 206, 147, 255, 178, 233, 45, 218, 53, 235, 45, 218, 69, 206, 172, 250, 178, 233, 164, 230, 53, 235, 164, 230, 44, 211, 172, 250, 172, 230, 45, 218, 47, 232, 45, 218, 44, 211, 147, 255, 172, 230, 164, 230),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray(2, 0, 29, 0, 26, 0, 2, 0, 8, 0, 29, 0, 6, 0, 30, 0, 27, 0, 6, 0, 18, 0, 30, 0, 20, 0, 35, 0, 32, 0, 20, 0, 14, 0, 35, 0, 12, 0, 24, 0, 33, 0, 12, 0, 0, 0, 24, 0, 7, 0, 13, 0, 19, 0, 7, 0, 1, 0, 13, 0, 17, 0, 44, 0, 23, 0, 17, 0, 47, 0, 44, 0, 4, 0, 28, 0, 10, 0, 4, 0, 25, 0, 28, 0, 10, 0, 31, 0, 22, 0, 10, 0, 28, 0, 31, 0, 22, 0, 34, 0, 16, 0, 22, 0, 31, 0, 34, 0, 16, 0, 25, 0, 4, 0, 16, 0, 34, 0, 25, 0, 43, 0, 37, 0, 40, 0, 43, 0, 46, 0, 37, 0, 11, 0, 38, 0, 5, 0, 11, 0, 41, 0, 38, 0, 3, 0, 45, 0, 15, 0, 3, 0, 36, 0, 45, 0, 21, 0, 39, 0, 9, 0, 21, 0, 42, 0, 39, 0),
+"material": SubResource("StandardMaterial3D_tuv7t"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 254, 255, 255, 191, 26, 4, 255, 255, 228, 251, 255, 255, 26, 4, 255, 255, 228, 251, 80, 223, 26, 4, 255, 255, 228, 251, 84, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 0, 0, 255, 191, 26, 4, 255, 255, 26, 4, 255, 191, 26, 4, 255, 255, 26, 4, 9, 205, 26, 4, 255, 255, 26, 4, 84, 213, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 84, 213, 255, 255, 0, 0, 254, 255, 84, 213, 228, 251, 255, 255, 228, 251, 255, 255, 228, 251, 255, 255, 228, 251, 9, 205, 228, 251, 255, 255, 228, 251, 84, 213, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 228, 251, 255, 255, 26, 4, 255, 191, 228, 251, 255, 255, 26, 4, 80, 223, 228, 251, 255, 255, 26, 4, 84, 213, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 237, 222, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 240, 204, 0, 0, 255, 255, 0, 0, 255, 191, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 237, 222, 255, 255, 255, 255, 0, 0, 84, 213, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 240, 204, 255, 255, 255, 255, 254, 255, 84, 213, 26, 4, 209, 17, 228, 251, 255, 255, 26, 4, 209, 17, 228, 251, 255, 191, 26, 4, 209, 17, 228, 251, 84, 213, 26, 4, 209, 17, 26, 4, 255, 191, 26, 4, 209, 17, 26, 4, 255, 191, 26, 4, 209, 17, 26, 4, 84, 213, 228, 251, 209, 17, 26, 4, 255, 191, 228, 251, 209, 17, 26, 4, 255, 191, 228, 251, 209, 17, 26, 4, 84, 213, 228, 251, 209, 17, 228, 251, 255, 255, 228, 251, 209, 17, 228, 251, 255, 191, 228, 251, 209, 17, 228, 251, 84, 213, 255, 255, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 255, 191, 255, 191, 234, 207, 214, 31, 170, 42, 170, 42, 255, 255, 255, 127, 170, 42, 84, 213, 255, 127, 255, 255, 255, 255, 255, 255, 44, 219, 90, 54, 170, 42, 170, 42, 255, 255, 255, 255, 170, 42, 84, 213, 170, 42, 170, 42, 255, 191, 255, 191, 44, 219, 90, 54, 84, 213, 84, 213, 255, 255, 255, 127, 170, 42, 84, 213, 170, 42, 170, 42, 255, 255, 255, 255, 234, 207, 214, 31, 84, 213, 84, 213, 255, 255, 255, 255, 27, 208, 57, 32, 255, 127, 255, 255, 255, 255, 255, 127, 65, 219, 132, 54, 255, 127, 255, 255, 255, 255, 255, 127, 27, 208, 57, 32, 170, 42, 170, 42, 255, 255, 255, 255, 65, 219, 132, 54, 170, 42, 170, 42, 255, 191, 255, 191, 255, 255, 255, 127, 170, 42, 170, 42, 255, 255, 255, 255, 255, 255, 255, 127, 170, 42, 170, 42, 255, 255, 255, 255, 255, 255, 255, 127, 84, 213, 84, 213, 255, 191, 255, 191, 255, 255, 255, 127, 84, 213, 84, 213)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_x5pyr")
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("label", "box", "shadow", "camera", "side_label1", "side_label2")]
+script = ExtResource("1_eau22")
+label = NodePath("Control/Label")
+box = NodePath("Box/Cube")
+shadow = NodePath("Shadow")
+camera = NodePath("Camera3D")
+side_label1 = NodePath("SideLabel1")
+side_label2 = NodePath("SideLabel2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.617294, -0.311104, 0.722608, -0.0208824, 0.91169, 0.410348, -0.786455, -0.268395, 0.556284, 0, 0, 0)
+light_energy = 0.5
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wfqae")
+
+[node name="Box" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Box"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("ArrayMesh_xdj4f")
+skeleton = NodePath("")
+
+[node name="Shadow" type="Sprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, -1.31134e-07, -1, 0, 3, -4.37114e-08, 0, 0.0146288, 0)
+texture = ExtResource("1_yn27w")
+
+[node name="Decal" type="Sprite3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -3.76505, 0.128735, 4.00048)
+visible = false
+texture = ExtResource("4_ecewf")
+
+[node name="Decal2" type="Sprite3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 3.67438, 0.851745, 4.00273)
+visible = false
+texture = ExtResource("5_p0dwv")
+
+[node name="Decal3" type="Sprite3D" parent="."]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 4.00068, 0.189406, 3.74801)
+visible = false
+texture = ExtResource("6_qnttb")
+
+[node name="SideLabel1" type="Sprite3D" parent="."]
+transform = Transform3D(-1.31134e-08, -0.3, -1.31134e-08, 0, -1.31134e-08, 0.3, -0.3, 1.31134e-08, 5.73206e-16, 4.3, 0.042, 0)
+texture = ExtResource("3_p74u0")
+
+[node name="SideLabel2" type="Sprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, 0.031, 4.3)
+texture = ExtResource("3_p74u0")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.415627, 0.572061, 0, 0.809017, 0.587785, -0.707107, -0.415627, 0.572061, 5, 7, 5)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSlider" type="HSlider" parent="Control"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 320.0
+offset_bottom = 29.0
+min_value = 1.0
+max_value = 4.5
+step = 0.1
+value = 1.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 2.0
+offset_right = 422.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_qvqx1")
+theme_override_font_sizes/font_size = 30
+text = "1"
+
+[node name="Equation(1)" type="Sprite2D" parent="Control"]
+position = Vector2(353, 18)
+scale = Vector2(0.195122, 0.214286)
+texture = ExtResource("9_utg0j")
+
+[connection signal="value_changed" from="Control/HSlider" to="." method="_on_h_slider_value_changed"]
