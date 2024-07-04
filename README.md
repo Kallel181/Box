@@ -10,7 +10,7 @@ O aplicativo permite simular a criação de uma caixa de papelão sem tampa, alt
 ## Problema
 Uma caixa sem tampa será fabricada a partir de um pedaço de papelão de 10 u.m. por 10 u.m., cortada como aparece na figura abaixo. Removendo as partes em vermelho e dobrando as partes em azul, como mostrado na figura, deseja-se saber: quais são as dimensões que produzirão uma caixa com o volume máximo?
 
-![image|center](https://github.com/Kallel181/Box/assets/86331656/147e60b4-2da8-4680-acdb-08b743ed9ca6)
+![image|500](https://github.com/Kallel181/Box/assets/86331656/147e60b4-2da8-4680-acdb-08b743ed9ca6)
 
 ## Funcionalidades
 - Interatividade para ajustar as dimensões da caixa.
