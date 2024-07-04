@@ -8,7 +8,7 @@ Este projeto é um aplicativo interativo conhecido como Objeto de Aprendizagem, 
 O aplicativo permite simular a criação de uma caixa de papelão sem tampa, alterando suas proporções e exibindo, em tempo real, um gráfico que mostra a mudança do volume. O objetivo é ajudar os usuários a visualizar e compreender como diferentes cortes e dobras afetam o volume da caixa.
 
 ## Problema
-Uma caixa sem tampa será fabricada a partir de um pedaço de papelão de 10m por 10m, cortada como aparece na figura abaixo. Removendo as partes em vermelho e dobrando as partes em azul, como mostrado na figura, deseja-se saber: quais são as dimensões que produzirão uma caixa com o volume máximo?
+Uma caixa sem tampa será fabricada a partir de um pedaço de papelão de 10 u.m. por 10 u.m., cortada como aparece na figura abaixo. Removendo as partes em vermelho e dobrando as partes em azul, como mostrado na figura, deseja-se saber: quais são as dimensões que produzirão uma caixa com o volume máximo?
 
 ![image](https://github.com/Kallel181/Box/assets/86331656/147e60b4-2da8-4680-acdb-08b743ed9ca6)
 
