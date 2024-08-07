@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dl0df6u8x4lwi"]
+[gd_scene load_steps=22 format=3 uid="uid://dl0df6u8x4lwi"]
 
 [ext_resource type="Script" path="res://Scenes/Sheet_Scene.gd" id="1_u0hyp"]
 [ext_resource type="Texture2D" uid="uid://dni61ymkakn8a" path="res://Assets/sheet_botton_Box_sides.png" id="2_li1tm"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scenes/UI_sheet.gd" id="5_h4son"]
 [ext_resource type="Texture2D" uid="uid://l0dnfn5ifm8m" path="res://Assets/Grid.png" id="5_stybu"]
 [ext_resource type="FontFile" uid="uid://bhuw12vl5wow3" path="res://Assets/Fonts/cmu.serif-roman.ttf" id="6_2ybuk"]
+[ext_resource type="Texture2D" uid="uid://c8gqf64sfl40n" path="res://Assets/h_latex.png" id="6_e3tnc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hnphm"]
 sky_top_color = Color(1, 1, 1, 1)
@@ -228,11 +229,21 @@ skeleton = NodePath("")
 [node name="camera_target" type="Node3D" parent="Sheet_Scene"]
 
 [node name="Camera3D" type="Camera3D" parent="Sheet_Scene/camera_target"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 5.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 6)
 
 [node name="Grid" type="Sprite3D" parent="Sheet_Scene"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 texture = ExtResource("5_stybu")
+
+[node name="h_label" type="Sprite3D" parent="Sheet_Scene"]
+transform = Transform3D(0.4, 0, 0, 5.29396e-23, -1.74846e-08, 0.4, 0, -0.4, -1.74846e-08, 4.5, 0.11, 5.3)
+alpha_cut = 1
+texture = ExtResource("6_e3tnc")
+
+[node name="h_label2" type="Sprite3D" parent="Sheet_Scene"]
+transform = Transform3D(0.4, -5.29396e-23, 0, 0, -1.74846e-08, 0.4, 0, -0.4, -1.74846e-08, 5.2, 0.11, 4.5)
+alpha_cut = 1
+texture = ExtResource("6_e3tnc")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3

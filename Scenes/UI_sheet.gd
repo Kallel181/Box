@@ -1,6 +1,7 @@
 extends Control
 
 @onready var label = $LeftSlider/Container/Label
+@onready var h_slider = $LeftSlider/HSlider
 
 @onready var botton = $"../Sheet_Scene/sheet_botton/botton"
 
@@ -18,11 +19,37 @@ extends Control
 @onready var change_color = $LeftSlider/ChangeColor
 @onready var remove_sides = $LeftSlider/RemoveSides
 
+@onready var h_label = $"../Sheet_Scene/h_label"
+@onready var h_label_2 = $"../Sheet_Scene/h_label2"
+
 var color_default = true
 var sides = true
 
+var side
+var scale_factor
+var position_offset
+
+func _ready():
+	var h = h_slider.value
+	side = 10-(2*h)
+	scale_factor = side/8
+	position_offset = (side/2) + (h/2)
+
+
 func _on_h_slider_value_changed(value):
 	label.text = str(value)
+	
+	var h = value
+	side = 10-(2*h)
+	scale_factor = side/8
+	position_offset = (side/2) + (h/2)
+	
+	if sides:
+		h_label.position = Vector3(position_offset,0.11,5.3)
+		h_label_2.position = Vector3(5.2,0.11,position_offset)
+	else:
+		h_label.position = Vector3((side/2)-0.3,0.11,position_offset)
+		h_label_2.position = Vector3(position_offset,0.11,(side/2)-0.3)
 
 
 func _on_change_color_pressed():
@@ -47,6 +74,9 @@ func _on_remove_sides_pressed():
 	if sides:
 		remove_sides.text = "Voltar Cantos"
 		
+		h_label.position = Vector3((side/2)-0.3,0.11,position_offset)
+		h_label_2.position = Vector3(position_offset,0.11,(side/2)-0.3)
+		
 		sides = false
 		side_cutout.visible = false
 		side_cutout2.visible = false
@@ -54,6 +84,9 @@ func _on_remove_sides_pressed():
 		side_cutout4.visible = false
 	else:
 		remove_sides.text = "Remover Cantos"
+		
+		h_label.position = Vector3(position_offset,0.11,5.3)
+		h_label_2.position = Vector3(5.2,0.11,position_offset)
 		
 		sides = true
 		side_cutout.visible = true

@@ -15,6 +15,11 @@ extends Node3D
 @onready var camera_3d = $camera_target/Camera3D
 @onready var camera_target = $camera_target
 
+@onready var h_label = $h_label
+@onready var h_label_2 = $h_label2
+
+
+
 
 func _ready():
 	camera_3d.look_at(camera_target.position)
