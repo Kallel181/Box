@@ -1,0 +1,305 @@
+[gd_scene load_steps=21 format=3 uid="uid://dl0df6u8x4lwi"]
+
+[ext_resource type="Script" path="res://Scenes/Sheet_Scene.gd" id="1_u0hyp"]
+[ext_resource type="Texture2D" uid="uid://dni61ymkakn8a" path="res://Assets/sheet_botton_Box_sides.png" id="2_li1tm"]
+[ext_resource type="Texture2D" uid="uid://vexdkyycx4o7" path="res://Assets/sheet_fold_side_Box_sides.png" id="3_6ohnd"]
+[ext_resource type="Texture2D" uid="uid://bchxxtj2qi25s" path="res://Assets/sheet_side_cutout_Box_sides.png" id="4_2ljpr"]
+[ext_resource type="Texture2D" uid="uid://b47v4ojdthm20" path="res://Assets/equation (1).png" id="5_e521h"]
+[ext_resource type="Script" path="res://Scenes/UI_sheet.gd" id="5_h4son"]
+[ext_resource type="Texture2D" uid="uid://l0dnfn5ifm8m" path="res://Assets/Grid.png" id="5_stybu"]
+[ext_resource type="FontFile" uid="uid://bhuw12vl5wow3" path="res://Assets/Fonts/cmu.serif-roman.ttf" id="6_2ybuk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hnphm"]
+sky_top_color = Color(1, 1, 1, 1)
+sky_horizon_color = Color(1, 1, 1, 1)
+ground_bottom_color = Color(1, 1, 1, 1)
+ground_horizon_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Sky" id="Sky_xbja0"]
+sky_material = SubResource("ProceduralSkyMaterial_hnphm")
+
+[sub_resource type="Environment" id="Environment_84axh"]
+background_mode = 2
+background_energy_multiplier = 0.6
+sky = SubResource("Sky_xbja0")
+tonemap_mode = 2
+ssao_enabled = true
+ssil_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30dyd"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("2_li1tm")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jps4j"]
+_surfaces = [{
+"aabb": AABB(-4, -0.05, -4, 8, 0.0999999, 8.00001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cioa4"]
+resource_name = "sheet_botton_Cube_004"
+_surfaces = [{
+"aabb": AABB(-4, -0.05, -4, 8, 0.0999999, 8.00001),
+"attribute_data": PackedByteArray(204, 253, 190, 251, 215, 128, 251, 95, 100, 1, 190, 251, 204, 253, 142, 252, 215, 32, 248, 31, 100, 1, 142, 252, 126, 64, 190, 251, 213, 192, 251, 95, 126, 64, 190, 251, 126, 64, 142, 252, 213, 96, 248, 31, 126, 64, 142, 252, 178, 190, 190, 251, 215, 128, 254, 31, 178, 190, 190, 251, 178, 190, 142, 252, 215, 32, 246, 95, 178, 190, 142, 252, 152, 127, 190, 251, 213, 192, 254, 31, 152, 127, 190, 251, 152, 127, 142, 252, 213, 96, 246, 95, 152, 127, 142, 252),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(2, 0, 11, 0, 5, 0, 2, 0, 8, 0, 11, 0, 6, 0, 21, 0, 9, 0, 6, 0, 18, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 12, 0, 3, 0, 15, 0, 12, 0, 0, 0, 3, 0, 7, 0, 13, 0, 19, 0, 7, 0, 1, 0, 13, 0, 22, 0, 4, 0, 10, 0, 22, 0, 16, 0, 4, 0),
+"material": SubResource("StandardMaterial3D_30dyd"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 254, 255, 255, 255, 255, 255, 0, 0, 254, 255, 84, 213, 255, 255, 0, 0, 254, 255, 255, 255, 255, 255, 255, 255, 254, 255, 255, 255, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 84, 213, 255, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 127, 84, 85, 84, 85, 255, 63, 255, 127, 255, 127, 255, 127, 84, 213, 170, 42, 255, 63, 255, 127, 255, 255, 255, 127, 84, 85, 84, 85, 255, 63, 255, 127, 255, 255, 255, 127, 84, 213, 170, 42, 255, 63, 255, 127, 255, 127, 255, 127, 84, 85, 84, 85, 255, 191, 255, 127, 255, 127, 255, 127, 84, 213, 170, 42, 255, 191, 255, 127, 255, 255, 255, 127, 84, 85, 84, 85, 255, 191, 255, 127, 255, 255, 255, 127, 84, 213, 170, 42, 255, 191, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jps4j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rawb1"]
+resource_name = "Material.003"
+cull_mode = 2
+albedo_texture = ExtResource("3_6ohnd")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_in5mw"]
+_surfaces = [{
+"aabb": AABB(-4, -0.05, -0.5, 8, 0.0999999, 1.00001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6sn53"]
+resource_name = "sheet_fold_side_Cube_006"
+_surfaces = [{
+"aabb": AABB(-4, -0.05, -0.5, 8, 0.0999999, 1.00001),
+"attribute_data": PackedByteArray(195, 127, 231, 253, 96, 57, 82, 48, 195, 127, 231, 253, 195, 127, 123, 252, 101, 88, 145, 161, 195, 127, 123, 252, 190, 113, 231, 253, 90, 43, 82, 48, 190, 113, 231, 253, 190, 113, 123, 252, 95, 74, 145, 161, 190, 113, 123, 252, 242, 239, 231, 253, 96, 57, 22, 162, 242, 239, 231, 253, 242, 239, 123, 252, 101, 88, 204, 47, 242, 239, 123, 252, 143, 1, 231, 253, 90, 43, 22, 162, 248, 253, 231, 253, 143, 1, 123, 252, 95, 74, 204, 47, 248, 253, 123, 252),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(2, 0, 11, 0, 5, 0, 2, 0, 8, 0, 11, 0, 6, 0, 21, 0, 9, 0, 6, 0, 18, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 12, 0, 3, 0, 15, 0, 12, 0, 0, 0, 3, 0, 7, 0, 13, 0, 19, 0, 7, 0, 1, 0, 13, 0, 22, 0, 4, 0, 10, 0, 22, 0, 16, 0, 4, 0),
+"material": SubResource("StandardMaterial3D_rawb1"),
+"name": "Material.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 128, 0, 0, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 0, 128, 0, 0, 255, 255, 254, 255, 84, 213, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 84, 213, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 84, 213, 0, 0, 255, 255, 0, 0, 255, 191, 255, 255, 0, 0, 254, 255, 0, 128, 255, 255, 0, 0, 254, 255, 84, 213, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 0, 128, 255, 255, 255, 255, 254, 255, 84, 213, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 84, 213, 255, 255, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 255, 255, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 255, 255, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 254, 255, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 254, 255, 255, 127, 255, 255, 170, 42, 84, 213, 255, 127, 0, 0, 255, 127, 255, 255, 170, 170, 170, 170, 255, 127, 0, 0, 255, 127, 254, 255, 170, 42, 84, 213, 255, 127, 0, 0, 255, 127, 254, 255, 170, 170, 170, 170, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_in5mw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wyoum"]
+resource_name = "Material.004"
+cull_mode = 2
+albedo_texture = ExtResource("4_2ljpr")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0hx18"]
+_surfaces = [{
+"aabb": AABB(-0.5, -0.05, -0.5, 1, 0.1, 1.00001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"name": "Material.004",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 255, 255, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 255, 255, 255, 255, 254, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q1top"]
+resource_name = "sheet_side_cutout_Cube_011"
+_surfaces = [{
+"aabb": AABB(-0.5, -0.05, -0.5, 1, 0.1, 1.00001),
+"attribute_data": PackedByteArray(113, 98, 186, 254, 126, 106, 89, 108, 113, 98, 186, 254, 113, 98, 169, 251, 48, 143, 148, 86, 113, 98, 169, 251, 41, 189, 186, 254, 126, 106, 92, 44, 52, 68, 186, 254, 41, 189, 169, 251, 48, 143, 151, 22, 52, 68, 169, 251, 174, 128, 186, 254, 101, 43, 89, 108, 174, 128, 186, 254, 174, 128, 169, 251, 73, 206, 148, 86, 174, 128, 169, 251, 236, 158, 186, 254, 101, 43, 92, 44, 236, 158, 186, 254, 236, 158, 169, 251, 73, 206, 151, 22, 236, 158, 169, 251),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(2, 0, 11, 0, 5, 0, 2, 0, 8, 0, 11, 0, 6, 0, 21, 0, 9, 0, 6, 0, 18, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 12, 0, 3, 0, 15, 0, 12, 0, 0, 0, 3, 0, 7, 0, 13, 0, 19, 0, 7, 0, 1, 0, 13, 0, 22, 0, 4, 0, 10, 0, 22, 0, 16, 0, 4, 0),
+"material": SubResource("StandardMaterial3D_wyoum"),
+"name": "Material.004",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 128, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 0, 128, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 255, 255, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 255, 255, 0, 0, 254, 255, 0, 128, 255, 255, 0, 0, 254, 255, 255, 255, 255, 255, 0, 0, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 0, 128, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 255, 255, 254, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 191, 255, 255, 255, 255, 0, 0, 255, 191, 255, 127, 255, 255, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 63, 255, 127, 255, 255, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 63, 255, 127, 0, 0, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 0, 0, 255, 127, 255, 255, 255, 127, 255, 63, 255, 127, 0, 0, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0hx18")
+
+[node name="Main" type="Node3D"]
+
+[node name="Sheet_Scene" type="Node3D" parent="."]
+script = ExtResource("1_u0hyp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Sheet_Scene"]
+transform = Transform3D(0.59171, -0.319566, 0.740106, -0.0208824, 0.91169, 0.410348, -0.80588, -0.258262, 0.532783, 0, 0, 0)
+light_energy = 0.5
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Sheet_Scene"]
+environment = SubResource("Environment_84axh")
+
+[node name="Sheet" type="Node3D" parent="Sheet_Scene"]
+
+[node name="sheet_botton" type="Node3D" parent="Sheet_Scene"]
+
+[node name="botton" type="MeshInstance3D" parent="Sheet_Scene/sheet_botton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_cioa4")
+skeleton = NodePath("")
+
+[node name="sheet_fold_side" type="Node3D" parent="Sheet_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.5)
+
+[node name="fold_side" type="MeshInstance3D" parent="Sheet_Scene/sheet_fold_side"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_6sn53")
+skeleton = NodePath("")
+
+[node name="sheet_fold_side2" type="Node3D" parent="Sheet_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.5)
+
+[node name="fold_side" type="MeshInstance3D" parent="Sheet_Scene/sheet_fold_side2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_6sn53")
+skeleton = NodePath("")
+
+[node name="sheet_fold_side3" type="Node3D" parent="Sheet_Scene"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.5, 0, 0)
+
+[node name="fold_side" type="MeshInstance3D" parent="Sheet_Scene/sheet_fold_side3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_6sn53")
+skeleton = NodePath("")
+
+[node name="sheet_fold_side4" type="Node3D" parent="Sheet_Scene"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.5, 0, 0)
+
+[node name="fold_side" type="MeshInstance3D" parent="Sheet_Scene/sheet_fold_side4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_6sn53")
+skeleton = NodePath("")
+
+[node name="sheet_side_cutout" type="Node3D" parent="Sheet_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -4.5)
+
+[node name="side_cutout" type="MeshInstance3D" parent="Sheet_Scene/sheet_side_cutout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_q1top")
+skeleton = NodePath("")
+
+[node name="sheet_side_cutout2" type="Node3D" parent="Sheet_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 4.5)
+
+[node name="side_cutout" type="MeshInstance3D" parent="Sheet_Scene/sheet_side_cutout2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_q1top")
+skeleton = NodePath("")
+
+[node name="sheet_side_cutout3" type="Node3D" parent="Sheet_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -4.5)
+
+[node name="side_cutout" type="MeshInstance3D" parent="Sheet_Scene/sheet_side_cutout3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_q1top")
+skeleton = NodePath("")
+
+[node name="sheet_side_cutout4" type="Node3D" parent="Sheet_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 4.5)
+
+[node name="side_cutout" type="MeshInstance3D" parent="Sheet_Scene/sheet_side_cutout4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0499998, 0)
+mesh = SubResource("ArrayMesh_q1top")
+skeleton = NodePath("")
+
+[node name="camera_target" type="Node3D" parent="Sheet_Scene"]
+
+[node name="Camera3D" type="Camera3D" parent="Sheet_Scene/camera_target"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 5.5)
+
+[node name="Grid" type="Sprite3D" parent="Sheet_Scene"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+texture = ExtResource("5_stybu")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_h4son")
+
+[node name="LeftSlider" type="HBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.011
+anchor_top = 0.011
+anchor_right = 0.011
+anchor_bottom = 0.011
+offset_right = 384.0
+offset_bottom = 42.0
+
+[node name="Back" type="Button" parent="UI/LeftSlider"]
+layout_mode = 2
+text = "Voltar"
+
+[node name="HSlider" type="HSlider" parent="UI/LeftSlider"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+min_value = 0.5
+max_value = 4.3
+step = 0.1
+value = 1.0
+
+[node name="Container" type="HBoxContainer" parent="UI/LeftSlider"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="UI/LeftSlider/Container"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_e521h")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="UI/LeftSlider/Container"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_2ybuk")
+theme_override_font_sizes/font_size = 32
+text = "1"
+
+[node name="VSeparator" type="VSeparator" parent="UI/LeftSlider"]
+layout_mode = 2
+
+[node name="ChangeColor" type="Button" parent="UI/LeftSlider"]
+layout_mode = 2
+text = "Mudar Cor"
+
+[node name="RemoveSides" type="Button" parent="UI/LeftSlider"]
+layout_mode = 2
+text = "Remover Cantos"
+
+[connection signal="pressed" from="UI/LeftSlider/Back" to="UI" method="_on_back_pressed"]
+[connection signal="value_changed" from="UI/LeftSlider/HSlider" to="Sheet_Scene" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="UI/LeftSlider/HSlider" to="UI" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="UI/LeftSlider/ChangeColor" to="UI" method="_on_change_color_pressed"]
+[connection signal="pressed" from="UI/LeftSlider/RemoveSides" to="UI" method="_on_remove_sides_pressed"]

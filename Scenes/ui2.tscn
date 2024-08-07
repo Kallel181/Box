@@ -23,13 +23,13 @@ sky_horizon_color = Color(1, 1, 1, 1)
 ground_bottom_color = Color(1, 1, 1, 1)
 ground_horizon_color = Color(1, 1, 1, 1)
 
-[sub_resource type="Sky" id="Sky_xbja0"]
+[sub_resource type="Sky" id="Sky_d6xs8"]
 sky_material = SubResource("ProceduralSkyMaterial_o46ki")
 
 [sub_resource type="Environment" id="Environment_wfqae"]
 background_mode = 2
 background_energy_multiplier = 0.6
-sky = SubResource("Sky_xbja0")
+sky = SubResource("Sky_d6xs8")
 tonemap_mode = 2
 ssao_enabled = true
 ssil_enabled = true
@@ -168,6 +168,11 @@ anchor_bottom = 0.011
 offset_right = 384.0
 offset_bottom = 42.0
 
+[node name="Back" type="Button" parent="UI/LeftSlider"]
+layout_mode = 2
+text = "Voltar
+"
+
 [node name="HSlider" type="HSlider" parent="UI/LeftSlider"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
@@ -259,4 +264,5 @@ render_target_update_mode = 4
 [node name="Graph" parent="UI/RightGraph/SubViewportContainer/SubViewport" node_paths=PackedStringArray("slider") instance=ExtResource("13_rsndy")]
 slider = NodePath("../../../../LeftSlider/HSlider")
 
+[connection signal="pressed" from="UI/LeftSlider/Back" to="UI" method="_on_back_pressed"]
 [connection signal="value_changed" from="UI/LeftSlider/HSlider" to="UI" method="_on_h_slider_value_changed"]

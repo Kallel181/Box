@@ -49,7 +49,7 @@ func change_box(value):
 	tween.tween_property(side_label2, "position", Vector3(0,0.042,0.3 + (10-2*h)/2),0.2).set_trans(Tween.TRANS_QUAD)
 	
 	tween.tween_property(decal1, "position", Vector3((((10-2*h)/2) - 0.4)*-1,0.129,((10-2*h)/2)+0.003),0.2).set_trans(Tween.TRANS_QUAD)
-	tween.tween_property(decal2, "position", Vector3(((10-2*h)/2) +0.003,h-0.2,((10-2*h)/2) - 0.3),0.2).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(decal2, "position", Vector3(((10-2*h)/2) + 0.003,h-0.2,((10-2*h)/2) - 0.3),0.2).set_trans(Tween.TRANS_QUAD)
 	tween.tween_property(decal3, "position", Vector3(((10-2*h)/2) + 0.003,0.189,((10-2*h)/2) - 0.3),0.2).set_trans(Tween.TRANS_QUAD)
 	
 	tween.tween_property(h_line, "position", Vector3(((10-2*h)/2) + 0.03, h/2 ,-((10-2*h)/2) - 0.03),0.2).set_trans(Tween.TRANS_QUAD)
